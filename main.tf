@@ -35,9 +35,9 @@ resource "flexibleengine_nat_gateway_v2" "nat_gateway" {
   router_id           = flexibleengine_vpc_v1.vpc[0].id
   internal_network_id = data.flexibleengine_vpc_subnet_v1.nat_gateway_subnet[0].id
 
-  lifecycle {
-    ignore_changes = [internal_network_id]
-  }
+  # lifecycle {
+  #   ignore_changes = [internal_network_id]
+  # }
 }
 
 locals {
